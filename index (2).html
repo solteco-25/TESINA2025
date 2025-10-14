@@ -257,7 +257,6 @@
 
 <script>
   let qr;
-
   // Generar QR con la URL actual o la ingresada
   function makeQR() {
     const el = document.getElementById('qrcode');
@@ -272,7 +271,6 @@
       correctLevel: QRCode.CorrectLevel.H
     });
   }
-
   // Descargar el QR en formato PNG
   function downloadQR() {
     const img = document.querySelector('#qrcode img');
@@ -304,20 +302,3 @@
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
