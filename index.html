@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Tesina | Celda de Paletizado y Seguridad de Máquinas</title>
-  <meta name="description" content="Sitio para acceder: informe, presentación, videos, imágenes y contacto de la tesina sobre celda de paletizado con seguridad de máquinas." />
+  <title>Tesina | Seguridad Funcional en la Automatización de Paletizado</title>
+  <meta name="description" content="Tesina sobre seguridad funcional aplicada a celdas de paletizado robotizadas. Acceso al informe, presentación, videos e imágenes de simulación y diseño.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
@@ -34,61 +34,24 @@
     section{padding:40px 0;border-bottom:1px solid #1b2742}
     .two{display:grid;grid-template-columns:1.2fr .8fr;gap:22px}
     @media (max-width:900px){.two{grid-template-columns:1fr}}
-    iframe{width:100%;aspect-ratio:16/9;border:0;border-radius:12px}
-    .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px}
-    .gallery img{width:100%;height:160px;object-fit:cover;border-radius:12px;border:1px solid #233055}
+    iframe, video{width:100%;aspect-ratio:16/9;border:0;border-radius:12px}
+    .gallery{display:grid;grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));gap:18px}
+    .img-card{position:relative;overflow:hidden;border-radius:12px;border:1px solid #233055}
+    .img-card img{width:100%;height:240px;object-fit:cover;display:block;transition:transform .3s ease}
+    .img-card img:hover{transform:scale(1.05)}
+    .img-card .caption{position:absolute;bottom:0;width:100%;background:rgba(0,0,0,0.6);color:#e8eefc;font-size:1rem;padding:8px;text-align:center;backdrop-filter:blur(3px);letter-spacing:.3px;font-weight:600}
     .qr-wrap{display:flex;gap:18px;flex-wrap:wrap;align-items:center}
     .qr-box{background:#0f1a31;border:1px dashed #2a3a61;border-radius:16px;padding:16px;display:flex;align-items:center;justify-content:center}
-    canvas#qrCanvas{background:#fff;border-radius:8px}
     footer{padding:28px 0;color:#a7b7db}
     .small{font-size:.92rem;color:#a9bcde}
     .tag{display:inline-block;padding:.25rem .5rem;border:1px solid #2a3a61;border-radius:999px;margin-right:.5rem;color:#b7c7e7}
-   .gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); /* antes 220px */
-  gap: 18px; /* un poco más de espacio entre imágenes */
-}
-
-.img-card {
-  position: relative;
-  overflow: hidden;
-  border-radius: 12px;
-  border: 1px solid #233055;
-}
-
-.img-card img {
-  width: 100%;
-  height: 240px; /* antes 180px */
-  object-fit: cover;
-  display: block;
-  transition: transform 0.3s ease; /* efecto suave al pasar el mouse */
-}
-
-.img-card img:hover {
-  transform: scale(1.05); /* pequeño zoom al pasar el mouse */
-}
-
-.img-card .caption {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  background: rgba(0, 0, 0, 0.6);
-  color: #e8eefc;
-  font-size: 1rem; /* texto un poco más grande */
-  padding: 8px;
-  text-align: center;
-  backdrop-filter: blur(3px);
-  letter-spacing: 0.3px;
-  font-weight: 600;
-}
-
   </style>
 </head>
 <body>
 <header>
   <div class="container">
     <nav>
-      <div class="brand">Tesina · Celda de Paletizado</div>
+      <div class="brand">Tesina · Seguridad Funcional</div>
       <div class="menu">
         <a href="#resumen">Resumen</a>
         <a href="#video">Video</a>
@@ -105,8 +68,11 @@
   <section class="hero">
     <div class="container">
       <span class="pill">Industria 4.0 · Seguridad de Máquinas · Robótica</span>
-      <h1>Celda de Paletizado con Dispositivos de Seguridad</h1>
-      <p>Este sitio acompaña la defensa de la tesina. Aquí los jurados y asistentes pueden acceder al informe completo, la presentación, videos de simulación/producción y material visual. Debajo encontrarán un código QR para acceso rápido.</p>
+      <h1>Seguridad Funcional en la Automatización de Paletizado</h1>
+      <p>
+        Integración de sistemas de seguridad funcional (Safety Machine) en operaciones de paletizado automatizado para reducir riesgos laborales y fortalecer la sostenibilidad estratégica. 
+        Se analizan estadísticas de accidentes, riesgos críticos en celdas robotizadas y una arquitectura de seguridad basada en normas internacionales (ISO 13849 e IEC 62061).
+      </p>
       <div style="margin-top:14px">
         <a class="btn" href="#descargas">Ir a Descargas</a>
         <a class="btn secondary" href="#video" style="margin-left:8px">Ver Video</a>
@@ -118,7 +84,10 @@
     <div class="container two">
       <div>
         <h2>Resumen del Proyecto</h2>
-        <p class="small">Objetivo: diseñar e implementar una celda de paletizado con enfoque en seguridad funcional. Se abordan dispositivos de protección (barrera fotoeléctrica, enclavamientos, E‑Stop), arquitectura de control, análisis de riesgos y validación.</p>
+        <p class="small">
+          Este trabajo analiza, desde una perspectiva de gestión y automatización, la implementación de un sistema de Safety Machine en una celda de paletizado robotizada. 
+          Se identifican riesgos, se describen componentes y requisitos normativos (ISO 13849, IEC 62061) y se propone una arquitectura de seguridad, evaluando beneficios operativos, económicos y reputacionales de su adopción.
+        </p>
         <div class="grid cols-3" style="margin-top:12px">
           <div class="card"><h3>Robot & Layout</h3><p>Trayectorias, final de línea, toma/soltado, ciclo y OEE.</p></div>
           <div class="card"><h3>Seguridad</h3><p>PL/SIL, circuitos de parada, resguardos, normas aplicables.</p></div>
@@ -136,14 +105,18 @@
           <h3>Ficha rápida</h3>
           <ul class="small">
             <li>Tipo de celda: Paletizado robotizado</li>
-            <li>Dispositivos: Barrera fotoeléctrica, enclavamiento, E‑Stop</li>
+            <li>Dispositivos: Barrera fotoeléctrica, enclavamiento, E-Stop</li>
             <li>Control: PLC + Safety Relay / Controller</li>
-            <li>Software: Simulador </li>
+            <li>Software: Simulador</li>
           </ul>
         </div>
         <div class="card" style="margin-top:12px">
           <h3>Autores</h3>
-          <p class="small">Fausto Coletti, Daniel Pérez, Mauro vedia — Universidad Nacional de Lomas de Zamora (UNLZ)</p>
+          <p class="small">
+            Fausto Coletti — Daniel Pérez — Mauro Vedia<br>
+            Universidad Nacional de Lomas de Zamora (UNLZ) — Facultad de Ingeniería<br>
+            Licenciatura en Gestión de Sistemas de Automatización y Robótica
+          </p>
         </div>
       </div>
     </div>
@@ -152,38 +125,22 @@
   <section id="video">
     <div class="container">
       <h2>Video de la Celda / Simulación</h2>
-      <!-- Reemplazar src con el link del video (YouTube, Vimeo o archivo MP4 hospedado) -->
-      <iframe title="Video de la celda de paletizado" src="media/Robot paletizador cajas - Proinnova.mp4" allowfullscreen></iframe>
-      <p class="small"> (layout, seguridad, función, validación).</p>
+      <video src="media/robot_paletizador_cajas_proinnova.mp4" autoplay muted playsinline controls style="width:100%;border-radius:12px"></video>
+      <p class="small">(Layout, seguridad, función y validación de la celda).</p>
     </div>
   </section>
 
   <section id="galeria">
-  <div class="container">
-    <h2>Imágenes</h2>
-    <div class="gallery" aria-label="Galería de imágenes">
-      <div class="img-card">
-        <img src="media/Safety-Products-Overview-callouts-2023.png" alt="Diagrama de seguridad">
-        <div class="caption">Diagrama de Seguridad</div>
-      </div>
-
-      <div class="img-card">
-        <img src="media/image3.png" alt="Paletizado manual">
-        <div class="caption">Paletizado Manual</div>
-      </div>
-
-      <div class="img-card">
-        <img src="media/image4.png" alt="Paletizado automático">
-        <div class="caption">Paletizado Automático</div>
-      </div>
-
-      <div class="img-card">
-        <img src="media/image24.png" alt="Sistema de seguridad">
-        <div class="caption">Sistema de Seguridad</div>
+    <div class="container">
+      <h2>Imágenes</h2>
+      <div class="gallery" aria-label="Galería de imágenes">
+        <div class="img-card"><img src="media/Safety-Products-Overview-callouts-2023.png" alt="Diagrama de seguridad"><div class="caption">Diagrama de Seguridad</div></div>
+        <div class="img-card"><img src="media/image3.png" alt="Paletizado manual"><div class="caption">Paletizado Manual</div></div>
+        <div class="img-card"><img src="media/image4.png" alt="Paletizado automático"><div class="caption">Paletizado Automático</div></div>
+        <div class="img-card"><img src="media/image24.png" alt="Sistema de seguridad"><div class="caption">Sistema de Seguridad</div></div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
   <section id="descargas">
     <div class="container">
@@ -192,7 +149,7 @@
         <div class="card">
           <h3>Informe (PDF)</h3>
           <p class="small">Versión completa de la tesina.</p>
-          <a class="btn" href="documentos/VERSION DS tesis_ 26.pdf" target="_blank" rel="noopener">Abrir PDF</a>
+          <a class="btn" href="documentos/version_ds_tesis_26.pdf" target="_blank" rel="noopener">Abrir PDF</a>
         </div>
         <div class="card">
           <h3>Presentación (PPTX)</h3>
@@ -205,7 +162,6 @@
           <a class="btn" href="" target="_blank" rel="noopener">Descargar ZIP</a>
         </div>
       </div>
-      <p class="small" style="margin-top:10px">Consejo: hospedá los archivos en Google Drive, OneDrive o similar, con permisos de solo lectura para jurados.</p>
     </div>
   </section>
 
@@ -216,15 +172,13 @@
       <div class="qr-wrap">
         <div class="card" style="flex:1;min-width:280px">
           <label class="small" for="qrUrl">URL a codificar (pegá aquí la dirección de este sitio o del PDF):</label>
-          <input id="qrUrl" type="url" placeholder="https://tu-dominio.com/tesina" style="width:100%;margin-top:8px;padding:10px;border-radius:10px;border:1px solid #233055;background:#0f1a31;color:#cfe1ff" />
+          <input id="qrUrl" type="url" placeholder="https://solteco-25.github.io/TESINA2025/" style="width:100%;margin-top:8px;padding:10px;border-radius:10px;border:1px solid #233055;background:#0f1a31;color:#cfe1ff" />
           <div style="margin-top:10px;display:flex;gap:10px;flex-wrap:wrap">
             <button class="btn" onclick="makeQR()">Generar QR</button>
             <button class="btn secondary" onclick="downloadQR()">Descargar PNG</button>
           </div>
         </div>
-        <div class="qr-box" style="flex:0 0 220px">
-          <div id="qrcode"></div>
-        </div>
+        <div class="qr-box" style="flex:0 0 220px"><div id="qrcode"></div></div>
       </div>
     </div>
   </section>
@@ -234,7 +188,7 @@
       <div>
         <h2>Contacto</h2>
         <p class="small">Consultas del jurado o solicitud de material adicional.</p>
-        <p class="small">Email: <a href="mailto:soltecorient@gmail.com">soltecorient@gmail.com</a> · Tel/WhatsApp: <a href="tel:000030303"></a></p>
+        <p class="small">Email: <a href="mailto:soltecorient@gmail.com">soltecorient@gmail.com</a> · Tel/WhatsApp: <a href="tel:+541162297516">+54 11 6229 7516</a></p>
       </div>
       <form class="card" onsubmit="event.preventDefault();alert('Gracias, mensaje enviado (demo).');">
         <h3>Enviar mensaje</h3>
@@ -248,57 +202,33 @@
 </main>
 
 <footer>
-  <div class="container small">© Tesina · Celda de Paletizado — 2025 · Hecho con HTML/CSS/JS</div>
+  <div class="container small">© Tesina — Seguridad Funcional en la Automatización de Paletizado · 2025 · Hecho con HTML/CSS/JS</div>
 </footer>
 
-<!-- QRCode.js desde CDN para generar QR en el navegador -->
-<!-- Librería para generar el código QR -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
-
 <script>
   let qr;
-  // Generar QR con la URL actual o la ingresada
   function makeQR() {
     const el = document.getElementById('qrcode');
     el.innerHTML = '';
     const url = document.getElementById('qrUrl').value || window.location.href;
-    qr = new QRCode(el, {
-      text: url,
-      width: 180,
-      height: 180,
-      colorDark: '#000000',
-      colorLight: '#ffffff',
-      correctLevel: QRCode.CorrectLevel.H
-    });
+    qr = new QRCode(el, { text: url, width: 180, height: 180, colorDark: '#000', colorLight: '#fff', correctLevel: QRCode.CorrectLevel.H });
   }
-  // Descargar el QR en formato PNG
   function downloadQR() {
     const img = document.querySelector('#qrcode img');
     const canvas = document.querySelector('#qrcode canvas');
     const dataURL = img ? img.src : (canvas ? canvas.toDataURL('image/png') : null);
-    if (!dataURL) {
-      alert('Primero generá el código QR.');
-      return;
-    }
+    if (!dataURL) return alert('Primero generá el código QR.');
     const a = document.createElement('a');
-    a.href = dataURL;
-    a.download = 'QR_tesina.png';
-    a.click();
+    a.href = dataURL; a.download = 'QR_tesina.png'; a.click();
   }
-
-  // Cargar la librería y generar el QR automáticamente al abrir la página
   function ensureQRLib(cb) {
     if (window.QRCode) return cb();
     const s = document.createElement('script');
     s.src = 'https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js';
-    s.onload = cb;
-    document.head.appendChild(s);
+    s.onload = cb; document.head.appendChild(s);
   }
-
-  window.addEventListener('DOMContentLoaded', () => {
-    ensureQRLib(makeQR);
-  });
+  window.addEventListener('DOMContentLoaded', () => ensureQRLib(makeQR));
 </script>
-
 </body>
 </html>
